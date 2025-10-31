@@ -1,7 +1,10 @@
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
-*/
+*/ this is where you add fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Box sizing rules */
 *,
 *::before,
@@ -27,7 +30,7 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  font-size: 100%;
+  font-size: 24px;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -44,3 +47,166 @@ body {
 }
 
 // Begin theme styles
+
+/*base css*/
+media queries min to max widths
+DOWNLOAD IMAGES IN PROJ DIRECTORY AND MAP TO IT
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+body{
+  font-family: 'Outfit', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.5;
+  max-width: 100%;
+  min-width: 45ch;
+  color: #451400;
+  background-color: #451400;
+}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  background-color: #ffff;
+}
+
+a:link {
+  color: #451400;
+}
+a:hover {
+  color: 	#ac2318;
+}
+
+a:visited {
+  color: #ac2318;
+}
+
+header{
+  background-color: #ffff;
+  color: #451400;
+  text-align: center;
+}
+
+.skip-link {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  padding: 2rem;
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 100;
+  border-radius: 0 0 4px 4px;
+}
+
+h1{
+  text-transform: uppercase;
+  color: #472e15;
+  padding: 2rem;
+  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6e/Brown_paper_bag_texture.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 75px;
+  min-width: 430px;
+}
+
+  @media screen and (min-width: 37rem){
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+svg{
+  max-width: 7%;
+  height: auto;
+
+}
+
+p{
+  color: #451400;
+}
+
+
+nav ul {
+  display: flex;
+  ;
+  max-width: 100%;
+  justify-content: space-evenly;
+  ;
+  flex-wrap: wrap;
+  margin: auto;
+  padding: 2rem;
+  background-color: #ac2318;
+  color: #ffff;
+  list-style: none;
+}
+
+nav ul a:link {
+  color: #ffff;
+}
+
+nav ul a:hover{
+  color: #451400;
+}
+
+
+
+@media screen and (max-width: 860px) {
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.page-footer  {
+  background-color: #ac2318;
+  padding-top: 1rem;
+}
+
+.page-footer .container{
+  padding-top: 1rem;
+}
+
+h2{
+  border-bottom: 2px solid #451400;
+}
+
+h1+h2{
+  text-transform: uppercase;
+  padding-top: 1rem;
+}
+
+.page-footer ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  list-style: none;
+}
+
+@media screen and (max-width: 760px){
+  .page-footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+#styles {
+  padding-bottom: 1rem;
+}
+
