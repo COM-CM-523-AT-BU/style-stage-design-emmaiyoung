@@ -124,25 +124,44 @@ header{
 }
 
 .skip-link {
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   color: #fff !important;
-  padding: 2rem;
-  width: 100%;
+  padding: 1rem 2rem 1rem 2rem;
   text-transform: uppercase;
-  z-index: 100;
+  z-index: 1000;
   border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  position: relative;
 }
 
 .skip-link:hover{
-  color: #ac2318 !important;
+  text-decoration: none !important;
 }
+
+.skip-link::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: 20%;
+  height: 3px;
+  width: 50%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.skip-link:hover::after {
+  transform: scaleX(1);
+}
+
 
 h1{
   text-transform: uppercase;
-  color: #472e15;
+  text-shadow: 8px 8px 16px #451400;
+  color: #fff;
   padding: 2rem;
-  background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/6e/Brown_paper_bag_texture.jpg);
+  background-image: url(https://source.roboflow.com/am3qw3RzG3XESvD4hwIKqwpvMTn2/6FWw2DCwdN1bEsa6B32P/original.jpg);
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -311,6 +330,5 @@ h1+h2{
 .page-footer a:hover {
   color: #451400 !important;
 }
-
 
 
