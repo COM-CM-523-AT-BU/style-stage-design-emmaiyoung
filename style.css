@@ -1,7 +1,10 @@
 /*
  * [Modified] Modern CSS Reset
  * @link https://github.com/hankchizljaw/modern-css-reset
-*/
+*/ this is where you add fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
 /* Box sizing rules */
 *,
 *::before,
@@ -27,7 +30,8 @@ html {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  font-size: 100%;
+  font-size: 24px;
+  letter-spacing: 1px;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
   overflow-x: hidden;
@@ -44,3 +48,444 @@ body {
 }
 
 // Begin theme styles
+
+/*base css*/
+media queries min to max widths
+DOWNLOAD IMAGES IN PROJ DIRECTORY AND MAP TO IT
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+body{
+  font-family: 'Outfit', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.5;
+  max-width: 100%;
+  min-width: 45ch;
+  color: #451400;
+  background-color: #451400;
+  text-align: center;
+}
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+#about > .container:first-child::before {
+  content: "🌶️";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(30rem, 20vw, 12rem);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#about .container:last-child::before {
+  content: "🌯";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(30rem, 20vw, 12rem);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#guidelines .container::before {
+  content: "🥑";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(30rem, 20vw, 12rem);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#contribute > .container:first-child::before {
+  content: "🌮";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(20rem, 20vw, 12rem);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#contribute > .container:nth-child(2)::before {
+  content: "🫑";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(25rem, 20vw, 12rem);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+#main {
+  text-align: left;
+  margin-bottom: -1rem;
+}
+
+a:link {
+  color: #451400;
+}
+a:hover {
+  color: 	#ac2318;
+}
+
+a:visited {
+  color: #ac2318;
+}
+
+.link-github{
+  display: inline-block;
+  background-color: #ac2318;
+  color: #fff !important;
+  padding: 0.4em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.link-github:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+.page-footer .link-github, .link-twittercontact, .link-rss, .link-support {
+  display: inline-block;
+  background-color: #451400;
+  color: #fff !important;
+  padding: 0.3em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.page-footer ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.page-footer .link-github:hover, .link-twittercontact:hover, .link-rss:hover, .link-support:hover{
+  color: #fff !important;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+}
+
+header{
+  background-color: #ffff;
+  color: #451400;
+  text-align: center;
+}
+
+.skip-link {
+  display: inline-block;
+  color: #fff !important;
+  padding: 1rem 2rem 1rem 2rem;
+  text-transform: uppercase;
+  z-index: 1000;
+  border-radius: 0 0 4px 4px;
+  text-decoration: none;
+  position: relative;
+}
+
+.skip-link:hover{
+  text-decoration: none !important;
+}
+
+.skip-link::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  bottom: 20%;
+  height: 3px;
+  width: 50%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.skip-link:hover::after {
+  transform: scaleX(1);
+}
+
+
+h1{
+  text-transform: uppercase;
+  text-shadow: 8px 8px 16px #451400;
+  color: #fff;
+  padding: 1em;
+  background-image: url(https://source.roboflow.com/am3qw3RzG3XESvD4hwIKqwpvMTn2/6FWw2DCwdN1bEsa6B32P/original.jpg);
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 200px;
+  min-width: 430px;
+}
+
+  @media screen and (min-width: 37rem){
+    h1 {
+      font-size: 100px;
+    }
+  }
+
+svg{
+  max-width: 10%;
+  height: auto;
+  fill: #fff;
+
+}
+
+p{
+  color: #451400;
+}
+
+
+nav ul {
+  display: flex;
+  ;
+  max-width: 100%;
+  justify-content: space-evenly;
+  ;
+  flex-wrap: wrap;
+  margin: 0 auto 1rem auto;
+  padding: 2rem;
+  background-color: #ac2318;
+  color: #ffff;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav a {
+  text-decoration: none !important;
+  color: #fff !important;
+  padding-bottom: 3px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 50%;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
+
+
+@media screen and (max-width: 860px) {
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.page-footer  {
+  background-color: #ac2318;
+  padding-top: 1rem;
+}
+
+.page-footer .container{
+  padding-top: 1rem;
+}
+
+h2{
+  border-bottom: 2px solid #451400;
+}
+
+h1+h2{
+  text-transform: uppercase;
+  font-size: 30px;
+  padding-top: 1rem;
+}
+
+.page-footer ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  gap: 1.5em;
+}
+
+@media screen and (max-width: 780px){
+  .page-footer ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+#styles {
+  padding-bottom: 1rem;
+}
+
+#about > .container,
+#guidelines > .container,
+#contribute > .container,
+#files > .container,
+.profile > .container,
+#styles > .container {
+  background-color: #fff;
+  color: #451400;
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#about > .container:hover,
+#guidelines > .container:hover,
+#contribute > .container:hover,
+.profile > .container:hover,
+#styles > .container:hover,
+#files > .container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+@media screen and (min-width: 1015px) {
+  .profile{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 1em);
+    margin-right: 3rem;
+  }
+  #styles{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 1em);
+  }
+
+  .profile > .container,
+  #styles > .container {
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile,
+  #styles {
+    width: 478px;
+    margin: 0 auto 0 auto;
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .profile,
+  #styles {
+    display: block;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.page-footer * {
+  color: #fff !important;
+}
+
+
+.page-footer a:hover {
+  color: #fff !important;
+}
+
+main ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style-position: inside;
+  list-style: none;
+  z-index: 1;
+  justify-items: stretch;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+main ul li {
+  display: inline-block;
+  background-color: #ac2318;
+  color: #fff !important;
+  padding: 0.4em 1.5em;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  white-space: normal;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+main ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 1000px) {
+  main ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile ul,
+#styles ul {
+  list-style: none;
+}
+
+blockquote{
+  padding-left: 1rem;
+  border-left: 5px solid #ac2318;
+  font-size: 30px;
+}
+
+
